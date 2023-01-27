@@ -1,12 +1,14 @@
-def student_data(student_id, **kwargs):
-    print(f'\nStudent ID: {student_id}')
-    if 'student_name' in kwargs:
-        print(f"Student Name: {kwargs['student_name']}")
+def hyphen(string):
+    string1 = string.split("-")
+    list1 = []
 
-    if 'student_class' in kwargs:
-        print(f"Student Class: {kwargs['student_class']}")
+    for i in range(len(string1)) :
+        b = string1[i]
+        list1.append(b)
+    list1.sort()
+    c = str("-".join(list1))
+    return c
 
-
-student_data(student_id='22104074', student_name='Hitesh Kochar')
-
-student_data(student_id='22104074', student_name='Hitesh Kochar', student_class='G2')
+string = str(input('Enter a string :'))
+a = hyphen(string)
+print(a)
