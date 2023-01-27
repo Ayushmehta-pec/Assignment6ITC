@@ -1,14 +1,15 @@
-def hyphen(string):
-    string1 = string.split("-")
-    list1 = []
+def pangram(string):
+    for i in range(65,91) :
+        if chr(i) and chr(i).lower() in string :
+            continue
+        else :
+            return False
 
-    for i in range(len(string1)) :
-        b = string1[i]
-        list1.append(b)
-    list1.sort()
-    c = str("-".join(list1))
-    return c
+string = str(input('enter a string :'))
 
-string = str(input('Enter a string :'))
-a = hyphen(string)
-print(a)
+a = pangram(string)
+
+if a == False :
+    print('It is not a pangram.')
+else :
+    print('It is a pangram.')
