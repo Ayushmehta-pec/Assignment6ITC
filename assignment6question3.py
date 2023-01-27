@@ -1,15 +1,8 @@
-def pangram(string):
-    for i in range(65,91) :
-        if chr(i) and chr(i).lower() in string :
-            continue
-        else :
-            return False
-
-string = str(input('enter a string :'))
-
-a = pangram(string)
-
-if a == False :
-    print('It is not a pangram.')
-else :
-    print('It is a pangram.')
+def pascal_triangle(n):
+   trow = [1]
+   y = [0]
+   for x in range(max(n,0)):
+      print(trow)
+      trow=[l+r for l,r in zip(trow+y, y+trow)]
+   return n>=1
+pascal_triangle(6)
