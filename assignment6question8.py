@@ -1,18 +1,20 @@
-class validity:
+class sol:
+ def findTriplets(arr, n):
 
-    def f(str):
+    found = False
+    for i in range(0, n-2):
 
-        a= ['()', '{}', '[]'] 
+        for j in range(i+1, n-1):
 
-        for i in a:
-            for j in a:
+            for k in range(j+1, n):
 
-                str = str.replace(j, '') 
+                if (arr[i] + arr[j] + arr[k] == 0):
+                    print(arr[i], arr[j], arr[k])
+                    found = True
+    if (found == False):
+        print(" not exist ")
 
-        return not str 
 
-s = input("enter : ")
-
-print(s, "-", "is balanced" 
-
-      if validity.f(s) else "is Unbalanced")
+arr = [-25, -10, -7, -3, 2, 4, 8, 10]
+n = len(arr)
+sol.findTriplets(arr, n)
